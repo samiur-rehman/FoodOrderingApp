@@ -12,8 +12,8 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.item);
   return (
     <div className="flex pr-3 border-solid border-black justify-between bg-gray-100 shadow-md ">
-      <div className="w-32 h-10">
-        <img className="mx-4 my-1 h-8" alt="logo" src={LOGO_URL} />
+      <div className="w-32">
+        <img className="mx-4" alt="logo" src={LOGO_URL} />
       </div>
       <div className="flex items-center">
         <ul className="flex">
@@ -22,16 +22,16 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="px-2 hover:underline">
-            <Link to="/">Grocery</Link>
+            <Link to="/grocery">Grocery</Link>
           </li>
           <li className="px-2 hover:underline">
-            <Link to="/"> About Us</Link>
+            <Link to="/about"> About Us</Link>
           </li>
           <li className="px-2 hover:underline">
-            <Link to="">Contact US </Link>
+            <Link to="/contact">Contact US </Link>
           </li>
           <li className="px-2 hover:underline">
-            <Link to="/">
+            <Link to="/cart">
               Cart -({cartItems.length}
               {cartItems.length > 1 ? " items" : " item"})
             </Link>
