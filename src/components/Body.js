@@ -150,7 +150,7 @@ const Body = () => {
       <div className="flex flex-wrap justify-center gap-8 mt-[2rem]">
         {listRestaurants?.map((item) => {
           return (
-            <Link key={item.info.id} to={"/restaurants/" + item.info.id}>
+            <Link key={item.info.id} to={`/restaurants/${item.info.id}`}>
               <ResturantCard restaurant={item} />
             </Link>
           );
